@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Overpass, Ubuntu;
+    background-color: #eee;
+}
+
+.landing-page {
+    background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 225%, 100%;
+    background-repeat: no-repeat;
+    background-position: left 25% center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border-bottom-left-radius: 150px;
+    padding: 70px 150px 0;
+    color: white;
+}
+
+@media (max-width:1037px) {
+    .landing-page {
+        padding: 50px 20px 0;
+    }
+}
+
+.landing-page .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.landing-page .header .left-side {
+    display: flex;
+}
+
+.landing-page .header .left-side .mainlist {
+    display: flex;
+    list-style: none;
+}
+
+.landing-page .header .left-side .logo {
+    margin-right: 50px;
+}
+
+.landing-page .header .left-side .mainlist li {
+    margin-right: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.landing-page .header .left-side .mainlist li ul {
+    background-color: white;
+    padding: 20px 0 25px 15px;
+    position: absolute;
+    left: 0;
+    list-style: none;
+    color: black;
+    border-radius: 5px;
+    display: none;
+}
+
+.landing-page .header .left-side .mainlist li ul li {
+    margin-top: 10px;
+}
+
+.landing-page .header .left-side .mainlist li ul li:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.landing-page .header .left-side .mainlist li img {
+    margin-left: 5px;
+    transition: .2s;
+}
+
+.landing-page .header .left-side .mainlist li:hover {
+    text-decoration: underline;
+}
+
+.landing-page .header .left-side .mainlist li:hover ul {
+    display: block;
+}
+
+.landing-page .header .left-side .mainlist li:hover img {
+    transform: rotate(180deg);
+}
+
+.landing-page .header .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .header .right-side .log-in {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.landing-page .header .right-side .sign-up {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    transition: .2s;
+}
+
+.landing-page .header .right-side .sign-up:hover {
+    background-color: hsl(13, 100%, 72%);
+    color: white;
+}
+
+.landing-page .header .right-side .menu-icon {
+    display: none;
+}
+
+.landing-page .content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page .content h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.landing-page .content p {
+    text-align: center;
+}
+
+.landing-page .content .start-learn {
+    display: flex;
+    margin-top: 50px;
+}
+
+.landing-page .content .start-learn .start {
+    margin-right: 20px;
+    width: 130px;
+    height: 40px;
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.landing-page .content .start-learn .start:hover {
+    background-color: hsl(13, 100%, 72%);
+    color: white;
+}
+
+.landing-page .content .start-learn .learn-more {
+    margin-right: 20px;
+    width: 130px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.landing-page .content .start-learn .learn-more:hover {
+    background-color: white;
+    color: hsl(13, 100%, 72%)
+}
+
+.mobile-menu {
+    color: black;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.mobile-menu .mobile-mainlist {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mobile-menu .mobile-mainlist li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: .2s;
+}
+
+.mobile-menu .mobile-mainlist li img {
+    transition: .2s;
+}
+
+.mobile-menu .mobile-mainlist::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+    position: absolute;
+    bottom: -20px;
+}
+
+.mobile-menu .mobile-mainlist ul {
+    list-style: none;
+    padding: 0;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #eee;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px 0 5px 0;
+    color: hsl(208, 49%, 24%);
+    display: none;
+    transition: .2s;
+}
+
+.mobile-menu .mobile-mainlist ul li {
+    margin-top: 5px;
+    transition: .2s;
+}
+
+.mobile-menu .mobile-mainlist li:hover img {
+    transform: rotate(180deg);
+}
+
+.mobile-menu .mobile-mainlist li:hover ul {
+    display: block;
+}
+
+.mobile-menu .mobile-mainlist ul li:hover {
+    font-weight: bold;
+}
+
+.mobile-menu .log-sign {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu .log-sign .mobile-log-in {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.mobile-menu .log-sign .mobile-log-in:hover {
+    font-weight: bold;
+}
+
+.mobile-menu .log-sign .mobile-sign-up {
+    width: 120px;
+    height: 40px;
+    background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:737px) {
+    .landing-page .header .left-side .mainlist {
+        display: none;
+    }
+
+    .landing-page .header .right-side .log-in {
+        display: none;
+    }
+
+    .landing-page .header .right-side .sign-up {
+        display: none;
+    }
+
+    .landing-page .header .right-side .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
