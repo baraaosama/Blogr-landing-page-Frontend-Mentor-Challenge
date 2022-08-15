@@ -1,7 +1,6 @@
 const mobileMenuIcon = document.querySelector(".menu-icon");
 const mobileMainList = document.querySelector(".mobile-menu");
 const content = document.querySelector(".content");
-console.log(mobileMainListlis)
 const x = window.matchMedia("(max-width: 737px)")
 mobileMenuIcon.addEventListener("click", () => {
     if (mobileMainList.style.display == "block") {
